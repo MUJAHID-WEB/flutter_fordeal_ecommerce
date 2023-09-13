@@ -11,7 +11,7 @@ class CustomBottomNavBar extends StatelessWidget {
     return BottomAppBar(
       color: Colors.white,
       child: SizedBox(
-        height: 50,
+        height: 20,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -22,7 +22,7 @@ class CustomBottomNavBar extends StatelessWidget {
             Navigator.pushNamed(context, '/brand');
           }, icon: Icon(Icons.diamond_outlined, color: Colors.black,)),
           IconButton(onPressed: (){
-            Navigator.pushNamed(context, '/favourite');
+            Navigator.pushNamed(context, '/favorite');
           }, icon: Icon(Icons.favorite_border, color: Colors.black,)),
           IconButton(onPressed: (){
             Navigator.pushNamed(context, '/cart');

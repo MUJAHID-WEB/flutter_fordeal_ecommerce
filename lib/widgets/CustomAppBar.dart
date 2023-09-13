@@ -11,10 +11,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       
       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+      leading: IconButton(
+        onPressed: () {}, 
+        icon: Icon(
+        Icons.menu,
+        color: Colors.black,
+        ),
+      ),
     );
   }
   
   @override
-  Size get preferredSize => Size.fromHeight(30.0);
+  Size get preferredSize => Size.fromHeight(50.0);
 }

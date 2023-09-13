@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({
+class BrandScreen extends StatelessWidget {
+  const BrandScreen({
     super.key,
   });
 
-  static const String routeName = '/';
+  static const String routeName = '/brand';
 
   static Route route(){
     return MaterialPageRoute(
       settings: RouteSettings(name: routeName),
-      builder: (_) => HomeScreen(),
+      builder: (_) => BrandScreen(),
     );
   }
 
@@ -25,8 +25,8 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Home',
-              style: Theme.of(context).textTheme.headlineLarge,
+              'Brand',
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.blue),
               ),
           ],
         ),
@@ -35,5 +35,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:fordeal/config/app_router.dart';
+import 'package:fordeal/config/theme.dart';
 import 'screens/screens.dart';
 
 
@@ -15,11 +16,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Clearance',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomeScreen(),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
+      theme: theme(),
+
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: HomeScreen.routeName,
+      // home: const HomeScreen(),
     );
   }
 }

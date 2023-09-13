@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({
+class WalletScreen extends StatelessWidget {
+  const WalletScreen({
     super.key,
   });
 
-  static const String routeName = '/';
+  static const String routeName = '/wallet';
 
   static Route route(){
     return MaterialPageRoute(
       settings: RouteSettings(name: routeName),
-      builder: (_) => HomeScreen(),
+      builder: (_) => WalletScreen(),
     );
   }
 
@@ -24,10 +24,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Home',
-              style: Theme.of(context).textTheme.headlineLarge,
-              ),
+            Text('Wallet'),
           ],
         ),
       ),
@@ -35,5 +32,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
 
