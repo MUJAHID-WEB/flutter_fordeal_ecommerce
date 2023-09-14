@@ -19,7 +19,19 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text('Category', style: TextStyle(color: Colors.black),),
+  //       leading: BackButton(
+  //    color: Colors.black
+  //  ),
+
+   leading: IconButton(
+    icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+    onPressed: () => Navigator.of(context).pop(),
+  ), 
+   centerTitle: true,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +40,7 @@ class CategoriesScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(),
+      //bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }

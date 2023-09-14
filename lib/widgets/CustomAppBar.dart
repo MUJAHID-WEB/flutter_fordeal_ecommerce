@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../screens/screens.dart';
+
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
   const CustomAppBar({
     super.key,
@@ -10,9 +12,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return AppBar(
       
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      backgroundColor: Colors.white,
       leading: IconButton(
-        onPressed: () {}, 
+        onPressed: () {
+          Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const CategoriesScreen()),
+  );
+        }, 
         icon: Icon(
         Icons.menu,
         color: Colors.black,

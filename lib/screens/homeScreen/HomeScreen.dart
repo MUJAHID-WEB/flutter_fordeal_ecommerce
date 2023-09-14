@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
+import '../screens.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
   });
@@ -17,6 +18,13 @@ class HomeScreen extends StatelessWidget {
   }
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
@@ -26,12 +34,12 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             Text(
               'Home',
-              style: Theme.of(context).textTheme.headlineLarge,
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.blue),
               ),
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(),
+      //bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }

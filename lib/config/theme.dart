@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 ThemeData theme(){
   return ThemeData(
-    scaffoldBackgroundColor: Colors.white70,
+    scaffoldBackgroundColor: Color(0xffF5F5F5),
     fontFamily: 'Tajawal',
+    //useMaterial3: true,
     textTheme: TextTheme(),
   );
 }
