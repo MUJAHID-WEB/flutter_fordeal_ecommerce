@@ -60,6 +60,8 @@ class _MainScreenState extends State<MainScreen> {
             currentIndex: _selectedIndex,
             selectedItemColor: Color(0xffcb3233),
             unselectedItemColor: Colors.black,
+            selectedLabelStyle: Theme.of(context).textTheme.bodySmall,
+            unselectedLabelStyle: Theme.of(context).textTheme.bodySmall,
             onTap: (index) {
               setState(() {
                 _selectedIndex = index;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
-import '../screens.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -28,18 +28,106 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Center(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+         padding: EdgeInsets.symmetric(horizontal: 10),
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: <Widget>[
+             Padding(
+               padding: EdgeInsets.only(bottom: 10),
+               child: Row(
+             
+                 children: [
+                   HomeProductCard(),
+                   SizedBox(width: 10,),
+                   HomeProductCard(),
+                 ],
+               ),
+             ),
+             Padding(
+               padding: EdgeInsets.only(bottom: 10),
+               child: Row(
+                 
+                 children: [
+                   HomeProductCard(),
+                   SizedBox(width: 10,),
+                   HomeProductCard(),
+                 ],
+               ),
+             ),
+             Padding(
+               padding: EdgeInsets.only(bottom: 10),
+               child: Row(
+                 
+                 children: [
+                   HomeProductCard(),
+                   SizedBox(width: 10,),
+                   HomeProductCard(),
+                 ],
+               ),
+             ),
+           ],
+         ),
+          ),
+      ),
+      //bottomNavigationBar: CustomBottomNavBar(),
+    );
+  }
+}
+
+class HomeProductCard extends StatelessWidget {
+  const HomeProductCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 300,
+      width: 181,
+      // color: Colors.white,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Home',
-              style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.blue),
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 240,
+              child: Image.network(
+                'https://picsum.photos/id/1074/400/400',
+                fit: BoxFit.cover,
+                ),
+            ),
+            SizedBox(
+              height: 60,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    
+                    Text(
+                      'Adidas Team Force 33',
+                      style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                      '7.99 AED',
+                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.bold),
+                      ),
+                  ],
+                ),
               ),
+            ),
           ],
         ),
       ),
-      //bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }
