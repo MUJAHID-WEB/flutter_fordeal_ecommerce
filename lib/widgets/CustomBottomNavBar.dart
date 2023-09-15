@@ -255,6 +255,11 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                 icon: Icon(Icons.home_outlined),
                 label: 'Home',
                activeIcon: Icon(Icons.home_filled),
+            //    activeIcon: ImageIcon(
+            //   AssetImage('assets/images/mainIcon.png'),
+            //   size: 10,
+            //   //color: Colors.green,
+            // ),
 
 
               ),

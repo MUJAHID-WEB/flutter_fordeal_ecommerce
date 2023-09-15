@@ -1,3 +1,4 @@
+export 'main/MainScreen.dart';
 export 'homeScreen/HomeScreen.dart';
 export 'account/AccountScreen.dart';
 export 'brand/BrandScreen.dart';

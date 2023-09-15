@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fordeal/config/app_router.dart';
 import 'package:fordeal/config/theme.dart';
-import 'package:fordeal/widgets/widgets.dart';
 import 'screens/screens.dart';
 
 
@@ -23,9 +22,8 @@ class MyApp extends StatelessWidget {
       // ),
       theme: theme(),
 
-      // onGenerateRoute: AppRouter.onGenerateRoute,
-      // initialRoute: HomeScreen.routeName,
-      home: CustomBottomNavBar(),
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: MainScreen.routeName,
     );
   }
 }
