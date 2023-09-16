@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: CustomAppBar(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -99,10 +99,15 @@ class HomeProductCard extends StatelessWidget {
           children: [
             SizedBox(
               height: 240,
-              child: Image.network(
-                'https://picsum.photos/id/1074/400/400',
+              child: 
+              Image.asset(
+                'assets/images/product_details/adidas.png',
                 fit: BoxFit.cover,
-                ),
+                )
+              // Image.network(
+              //   'https://picsum.photos/id/1074/400/400',
+              //   fit: BoxFit.cover,
+              //   ),
             ),
             SizedBox(
               height: 60,
