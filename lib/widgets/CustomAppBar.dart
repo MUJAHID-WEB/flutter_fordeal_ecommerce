@@ -38,20 +38,55 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 class BackAppBarWithSearch extends StatelessWidget
     implements PreferredSizeWidget {
   const BackAppBarWithSearch({
-    super.key,
+    super.key, 
   });
+
+
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffF5F5F5),
       elevation: 0,
-      title: const Text(
-        'Category',
-        style: TextStyle(color: Colors.black),
+    
+      leading: IconButton(
+        icon: const Icon(Icons.arrow_back_ios, color: Colors.black, size: 18,),
+        onPressed: () => Navigator.of(context).pop(),
+      ),
+      centerTitle: true,
+    );
+  }
+
+  @override
+  Size get preferredSize => Size.fromHeight(50.0);
+}
+
+/////////// BackAppBarWithTitle
+
+class BackAppBarWithTitle extends StatelessWidget
+    implements PreferredSizeWidget {
+  const BackAppBarWithTitle({
+    super.key,
+    required this.title,
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      backgroundColor: Color(0xffF5F5F5),
+      elevation: 0,
+      title: Text(
+        title,
+        style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
       ),
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+        icon: const Icon(
+          Icons.arrow_back_ios, 
+          color: Colors.black,
+          size: 18,
+          ),
         onPressed: () => Navigator.of(context).pop(),
       ),
       centerTitle: true,

@@ -12,4 +12,5 @@ export 'orders/OrdersScreen.dart';
 export 'coupon/CouponScreen.dart';
 export 'wallet/WalletScreen.dart';
 export 'address/AddressScreen.dart';
+export 'address/AddNewAddress/AddNewAddress.dart';
 export 'settings/SettingsScreen.dart';

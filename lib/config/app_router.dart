@@ -51,6 +51,9 @@ class AppRouter{
       case AddressScreen.routeName:
         return AddressScreen.route();
 
+      case AddNewAddress.routeName:
+        return AddNewAddress.route();
+
       case SettingsScreen.routeName:
         return SettingsScreen.route();
 

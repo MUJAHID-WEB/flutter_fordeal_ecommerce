@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/widgets.dart';
+import '../../../widgets/widgets.dart';
 
-class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({
+class AddNewAddress extends StatelessWidget {
+  const AddNewAddress({
     super.key,
   });
 
-  static const String routeName = '/categories';
+  static const String routeName = '/addnewaddress';
 
   static Route route(){
     return MaterialPageRoute(
       settings: RouteSettings(name: routeName),
-      builder: (_) => CategoriesScreen(),
+      builder: (_) => AddNewAddress(),
     );
   }
 
@@ -20,13 +20,13 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BackAppBarWithTitle(
-        title: 'Categories',
+        title: 'Add New Address',
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('CategoriesScreen'),
+            Text('Add New Address'),
           ],
         ),
       ),
@@ -34,5 +34,3 @@ class CategoriesScreen extends StatelessWidget {
     );
   }
 }
-
-

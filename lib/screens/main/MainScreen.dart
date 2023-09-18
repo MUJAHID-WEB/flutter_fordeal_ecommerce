@@ -73,10 +73,10 @@ class _MainScreenState extends State<MainScreen> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined),
                 label: 'Home',
-               activeIcon: Icon(Icons.home_filled),
-            //    activeIcon: ImageIcon(
-            //   AssetImage('assets/images/mainIcon.png'),
-            //   size: 10,
+                activeIcon: Icon(Icons.home_filled),
+            // activeIcon: ImageIcon(
+            //   AssetImage('assets/icons/minilogo.png'),
+            //   size: 25,
             //   //color: Colors.green,
             // ),
 
