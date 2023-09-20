@@ -4,7 +4,7 @@ class DottedBorderPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.black
+      ..color = Colors.grey
       ..strokeWidth = 2
       ..style = PaintingStyle.stroke;
 

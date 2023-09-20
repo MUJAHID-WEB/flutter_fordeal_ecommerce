@@ -19,7 +19,9 @@ class ReviewsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: BackAppBarWithTitle(
+        title: 'All Reviews',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +30,6 @@ class ReviewsScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }
